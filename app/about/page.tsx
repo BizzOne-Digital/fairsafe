@@ -20,7 +20,7 @@ export default function AboutPage() {
 >
   {/* Background Image */}
   <Image
-    src="/img/IMG_0363.png"
+    src="/img/bgabout1.jpeg"
     alt="FAIRSAFE Team"
     fill
     style={{
@@ -321,7 +321,7 @@ export default function AboutPage() {
         }}
       >
         <Image
-          src="/img/IMG_0398.JPG"
+          src="/img/IMG_0398.jpg"
           alt="Trust India"
           fill
           style={{
