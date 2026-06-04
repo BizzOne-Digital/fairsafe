@@ -30,13 +30,14 @@ export default function AboutPage() {
   />
 
   {/* Dark Overlay */}
-  <div
-    style={{
-      position: "absolute",
-      inset: 0,
-      background: "rgba(0,0,0,0.35)",
-    }}
-  />
+<div
+  style={{
+    position: "absolute",
+    inset: 0,
+    background:
+      "linear-gradient(to right, rgba(255,255,255,0.92) 15%, rgba(255,255,255,0.5) 28%, rgba(255,255,255,0.18) 48%, transparent 75%)",
+  }}
+/>
 
   {/* Content */}
   <div
