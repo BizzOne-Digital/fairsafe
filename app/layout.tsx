@@ -17,7 +17,7 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  title: "FAIRSAFE – First Aid & Safety Solutions | Vancouver, BC",
+  title: "FAIRSAFE – First aid & Safety Servicess | Vancouver, BC",
   description:
     "Professional first aid and safety coverage for events, construction sites, and industrial worksites across Metro Vancouver. Certified staff, fair prices, free AED with contract.",
 

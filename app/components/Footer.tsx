@@ -100,7 +100,7 @@ export default function Footer() {
     }}
   >
     <Image
-      src="/images/logo-icon.jpg"
+      src="/images/logo.png"
       alt="FAIRSAFE"
       width={130}
       height={50}

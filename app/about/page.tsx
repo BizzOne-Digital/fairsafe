@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck, Users, MapPin, DollarSign, Award, HeartPulse, HardHat, Calendar, ArrowRight, CheckCircle, Clock, Phone } from "lucide-react";
 
-export const metadata = { title: "About – FAIRSAFE First Aid & Safety Solutions" };
+export const metadata = { title: "About – FAIRSAFE First aid & Safety Servicess" };
 
 export default function AboutPage() {
   return (
@@ -35,7 +35,7 @@ export default function AboutPage() {
     position: "absolute",
     inset: 0,
     background:
-      "linear-gradient(to right, rgba(255,255,255,0.92) 15%, rgba(255,255,255,0.5) 28%, rgba(255,255,255,0.18) 48%, transparent 75%)",
+      "linear-gradient(to right, rgba(0,0,0,0.92) 15%, rgba(0,0,0,0.5) 28%, rgba(0,0,0,0.18) 48%, transparent 75%)",
   }}
 />
 
@@ -537,7 +537,47 @@ export default function AboutPage() {
         </div>
       </section>
 
-    
+    {/* ── TEAM / FOUNDER ── */}
+      <section id="team" style={{ background: "#FFFFFF", padding: "100px 5%" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 64 }}>
+            <div className="section-label">The People</div>
+            <h2 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "clamp(2rem,4vw,3.2rem)", letterSpacing: "0.02em" }}>
+              MEET THE <span style={{ color: "#7C3AED" }}>OWNER</span>
+            </h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))", gap: 56, alignItems: "center", maxWidth: 900, margin: "0 auto" }}>
+            <div style={{ position: "relative" }}>
+              <div style={{ position: "relative", height: 400, borderRadius: 12, overflow: "hidden" }}>
+                <Image src="/images/IMG_0198.jpg" alt="Nassif Rahmathullah - Founder" fill style={{ objectFit: "cover" }} />
+                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,rgba(255,255,255,0.85) 0%,transparent 50%)" }} />
+                <div style={{ position: "absolute", bottom: 24, left: 24 }}>
+                  <div style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.5rem", letterSpacing: "0.04em" }}>NASSIF RAHMATHULLAH</div>
+                  <div style={{ fontSize: "0.78rem", color: "rgba(26,10,46,0.6)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Founder & Director</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="section-label">Founder & Director</div>
+              <h3 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "2rem", letterSpacing: "0.04em", marginBottom: 20 }}>NASSIF RAHMATHULLAH</h3>
+              <p style={{ color: "rgba(26,10,46,0.7)", lineHeight: 1.85, marginBottom: 18, fontSize: "0.95rem" }}>
+                Nassif founded FAIRSAFE after identifying a clear gap in Metro Vancouver's safety services market — first aid coverage was either overpriced, understaffed, or unreliable.
+              </p>
+              <p style={{ color: "rgba(26,10,46,0.6)", lineHeight: 1.85, marginBottom: 18, fontSize: "0.93rem" }}>
+                With a commitment to keeping prices fair and service quality high, Nassif built FAIRSAFE around the belief that <strong style={{ color: "#1A0A2E" }}>every event and every worksite deserves professional protection</strong> — regardless of budget.
+              </p>
+              
+              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+                <a href="tel:6043788311" style={{ display: "inline-flex", alignItems: "center", gap: 10, color: "rgba(26,10,46,0.7)", textDecoration: "none", fontSize: "0.9rem" }}>
+                  <Phone size={15} color="#7C3AED" /> (604) 378-8311
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
 
       {/* ── CTA ── */}
       <section style={{ background: "linear-gradient(135deg,#7C3AED,#4C1D95)", padding: "80px 5%", textAlign: "center" }}>

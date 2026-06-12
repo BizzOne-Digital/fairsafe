@@ -10,7 +10,7 @@ import {
 import ContactForm from "../components/ContactForm";
 
 export const metadata = {
-  title: "Contact – FAIRSAFE First Aid & Safety Solutions",
+  title: "Contact – FAIRSAFE First aid & Safety Servicess",
 };
 
 export default function ContactPage() {
