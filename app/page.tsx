@@ -416,16 +416,30 @@ export default function Home() {
       {/* ── PHOTO GRID (RESPONSIVE MOSAIC) ── */}
       <section style={{ background: "#F8F5FF", padding: "100px 5%" }}>
         <style>{`
-          @media (max-width: 900px) {
-            .gallery-grid { grid-template-columns: 1fr 1fr !important; grid-template-rows: 240px 240px 240px !important; }
-            .gallery-large { grid-column: 1 / 3 !important; grid-row: auto !important; }
-          }
-          @media (max-width: 640px) {
-            .gallery-grid { grid-template-columns: 1fr !important; grid-template-rows: none !important; }
-            .gallery-large { grid-column: auto !important; }
-            .gallery-item { height: 240px !important; }
-            .gallery-heading { flex-direction: column !important; align-items: flex-start !important; }
-          }
+        @media (max-width: 640px) {
+  .gallery-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .gallery-item,
+  .gallery-large {
+    width: 100% !important;
+    height: 260px !important;
+    min-height: 260px !important;
+  }
+
+  .hoodie-item {
+    height: 500px !important;
+    min-height: 500px !important;
+  }
+
+  .gallery-heading {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
         `}</style>
 
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
@@ -441,22 +455,103 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="gallery-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gridTemplateRows: "280px 280px", gap: 12 }}>
-            <div className="gallery-item gallery-large" style={{ gridRow: "1 / 3", borderRadius: 10, overflow: "hidden", position: "relative" }}>
-              <Image src="/images/work1.jpeg" alt="FAIRSAFE" fill sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 33vw" style={{ objectFit: "cover" }} />
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,rgba(26,10,46,0.5),transparent 60%)" }} />
-            </div>
-            <div className="gallery-item" style={{ borderRadius: 10, overflow: "hidden", position: "relative" }}>
-              <Image src="/images/gallery3.jpg" alt="FAIRSAFE" fill sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 33vw" style={{ objectFit: "cover" }} />
-            </div>
-            <div className="gallery-item" style={{ borderRadius: 10, overflow: "hidden", position: "relative" }}>
-              <Image src="/images/service-staffing.jpg" alt="FAIRSAFE" fill sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 33vw" style={{ objectFit: "cover" }} />
-            </div>
-            
-            <div className="gallery-item" style={{ borderRadius: 10, overflow: "hidden", position: "relative" }}>
-              <Image src="/images/gallery7.jpg" alt="FAIRSAFE" fill sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 33vw" style={{ objectFit: "cover" }} />
-            </div>
-          </div>
+         <div
+  className="gallery-grid"
+  style={{
+    display: "grid",
+    gridTemplateColumns: "1.1fr 1.1fr 1fr",
+    gridTemplateRows: "280px 280px",
+    gap: 12,
+  }}
+>
+  {/* Left Large */}
+  <div
+    className="gallery-item gallery-large"
+    style={{
+      gridColumn: "1",
+      gridRow: "1 / 3",
+      borderRadius: 10,
+      overflow: "hidden",
+      position: "relative",
+    }}
+  >
+    <Image
+      src="/images/work1.jpeg"
+      alt="FAIRSAFE"
+      fill
+      sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 33vw"
+      style={{ objectFit: "cover" }}
+    />
+    <div
+      style={{
+        position: "absolute",
+        inset: 0,
+        background:
+          "linear-gradient(to top,rgba(26,10,46,0.5),transparent 60%)",
+      }}
+    />
+  </div>
+
+  {/* Center Tall (Hoodie) */}
+ <div
+  className="gallery-item hoodie-item"
+  style={{
+    gridColumn: "2",
+    gridRow: "1 / 3",
+    borderRadius: 10,
+    overflow: "hidden",
+    position: "relative",
+  }}
+>
+    <Image
+      src="/gallery/IMG_1265.jpg"
+      alt="FAIRSAFE"
+      fill
+      sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 33vw"
+      style={{ objectFit: "cover" }}
+    />
+  </div>
+
+  {/* Top Right */}
+  <div
+    className="gallery-item"
+    style={{
+      gridColumn: "3",
+      gridRow: "1",
+      borderRadius: 10,
+      overflow: "hidden",
+      position: "relative",
+    }}
+  >
+    <Image
+      src="/images/service-staffing.jpg"
+      alt="FAIRSAFE"
+      fill
+      sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 33vw"
+      style={{ objectFit: "cover" }}
+    />
+  </div>
+
+  {/* Bottom Right */}
+  <div
+    className="gallery-item"
+    style={{
+      gridColumn: "3",
+      gridRow: "2",
+      borderRadius: 10,
+      overflow: "hidden",
+      position: "relative",
+    }}
+  >
+    <Image
+      src="/images/gallery7.jpg"
+      alt="FAIRSAFE"
+      fill
+      sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 33vw"
+      style={{ objectFit: "cover" }}
+    />
+  </div>
+</div>
         </div>
       </section>
 

@@ -16,6 +16,14 @@ const images = [
   { src: "/images/service-worksite.jpg", label: "Construction Safety" },
   { src: "/images/service-staffing.jpg", label: "Safety Staffing" },
   { src: "/images/IMG_7393.jpg", label: "Team Ready" },
+  { src: "/gallery/IMG_1267.jpg", label: "", span: "col" },
+  
+  { src: "/gallery/IMG_1278.jpg", label: "" },
+  { src: "/gallery/IMG_1299.jpg", label: "" },
+  { src: "/gallery/IMG_1265.jpg", label: "", span: "col" },
+  { src: "/gallery/IMG_1334.jpg", label: "" },
+ 
+  
 ];
 
 export default function GalleryPage() {
