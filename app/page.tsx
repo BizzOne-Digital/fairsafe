@@ -23,7 +23,7 @@ export default function Home() {
         {/* Background image */}
         <div style={{ position: "absolute", inset: 0 }}>
           <Image
-            src="/images/herobg.png"
+            src="/new/herobg.png"
             alt="FAIRSAFE in action"
             fill
             priority

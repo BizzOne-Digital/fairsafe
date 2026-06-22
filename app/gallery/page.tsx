@@ -11,6 +11,7 @@ const images = [
   { src: "/images/IMG_0118.jpg", label: "Youth Events" },
   { src: "/images/IMG_0145.jpg", label: "Community Events" },
   { src: "/images/gallery7.jpg", label: "Medical Support" },
+  { src: "/new/IMG_1581.png", label: "" },
   { src: "/images/gallery8.jpg", label: "Lower Mainland" },
   { src: "/images/IMG_0121.jpg", label: "Event First Aid" },
   { src: "/images/service-worksite.jpg", label: "Construction Safety" },
@@ -22,6 +23,8 @@ const images = [
   { src: "/gallery/IMG_1299.jpg", label: "" },
   { src: "/gallery/IMG_1265.jpg", label: "", span: "col" },
   { src: "/gallery/IMG_1334.jpg", label: "" },
+  { src: "/new/IMG_1579.png", label: "" },
+  
  
   
 ];
