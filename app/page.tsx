@@ -666,7 +666,7 @@ export default function Home() {
             <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(124,58,237,0.35)", borderRadius: 16, padding: 44, position: "relative", overflow: "hidden" }}>
               <div style={{ position: "absolute", top: 20, right: -30, background: "#7C3AED", color: "#FFFFFF", padding: "6px 48px", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", transform: "rotate(35deg)" }}>FREE BONUS</div>
               <HeartPulse size={36} color="#A78BFA" style={{ marginBottom: 20 }} />
-              <h3 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.8rem", letterSpacing: "0.04em", marginBottom: 14, color: "#FFFFFF" }}>FREE AED RENTAL RENTEL INCLUDED</h3>
+              <h3 style={{ fontFamily: "'Bebas Neue',sans-serif", fontSize: "1.8rem", letterSpacing: "0.04em", marginBottom: 14, color: "#FFFFFF" }}>FREE AED RENTEL INCLUDED</h3>
               <p style={{ color: "rgba(255,255,255,0.65)", lineHeight: 1.75, fontSize: "0.95rem" }}>
                 Book a coverage contract and receive a <span style={{ color: "#A78BFA", fontWeight: 700 }}>complimentary Automated External Defibrillator (AED)</span> — a $1,500+ value included at no cost.
               </p>
