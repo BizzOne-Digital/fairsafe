@@ -108,7 +108,7 @@ export default function ContactPage() {
               "24/7 Availability",
               "Certified Staff",
               "Rapid Deployment",
-              "Free AED Included",
+              "Free AED RENTEL SITH CONTRACT",
             ].map((item) => (
               <div
                 key={item}
