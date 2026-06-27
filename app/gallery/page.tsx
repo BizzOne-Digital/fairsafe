@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata = { title: "Gallery – FAIRSAFE First aid & Safety Servicess" };
+export const metadata = { title: "Gallery – FAIRSAFE First aid & Safety Solutionss" };
 
 const images = [
   { src: "/images/gallery1.jpg", label: "Event Coverage", span: "row" },

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck, Users, MapPin, DollarSign, Award, HeartPulse, HardHat, Calendar, ArrowRight, CheckCircle, Clock, Phone } from "lucide-react";
 
-export const metadata = { title: "About – FAIRSAFE First aid & Safety Servicess" };
+export const metadata = { title: "About – FAIRSAFE First aid & Safety Solutionss" };
 
 export default function AboutPage() {
   return (

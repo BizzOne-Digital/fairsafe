@@ -86,7 +86,7 @@ export default function Navbar() {
   }}
 >
   <Image
-    src="/images/logo.png"
+    src="/newlogo.png"
     alt="FAIRSAFE"
     width={110}
     height={42}
