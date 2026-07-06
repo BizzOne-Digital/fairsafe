@@ -727,7 +727,7 @@ export default function Home() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))" }}>
           <div style={{ position: "relative", minHeight: 440 }}>
             <Image
-              src="/img/IMG_7393.png"
+              src="/img/IMG_7393.jpg"
               alt="Community event support"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
