@@ -364,14 +364,25 @@ export default function AboutPage() {
 
         <p
           style={{
+            color: "#5B21B6",
+            fontWeight: 700,
+            lineHeight: 1.6,
+            marginBottom: 20,
+          }}
+        >
+          Proudly Supporting Vancouver's FIFA World Cup 2026 Host City Celebrations
+        </p>
+
+        <p
+          style={{
             color: "rgba(26,10,46,0.7)",
             lineHeight: 1.85,
             marginBottom: 20,
           }}
         >
           FAIRSAFE proudly provides on-site first
-          aid and event medical support services
-          for events associated with
+          aid and event medical support for events
+          associated with
           <strong style={{ color: "#1A0A2E" }}>
             {" "}the Musqueam Indian Band
           </strong>
@@ -385,8 +396,9 @@ export default function AboutPage() {
             marginBottom: 20,
           }}
         >
-          Our team supports community and youth
-          sporting events by delivering
+          Our team supports community gatherings,
+          youth sporting events and FIFA World Cup
+          2026 host city celebrations by delivering
           professional first aid coverage and
           reliable medical standby services.
         </p>
@@ -400,7 +412,7 @@ export default function AboutPage() {
         >
           We remain committed to providing
           dependable and professional first aid
-          services across BC.
+          services throughout British Columbia.
         </p>
 
         <div
@@ -445,17 +457,18 @@ export default function AboutPage() {
         <div
           style={{
             position: "relative",
-            height: 300,
+            height: 460,
             borderRadius: 12,
             overflow: "hidden",
           }}
         >
           <Image
-            src="/images/gallery5.jpg"
-            alt=""
+            src="/jul/img1.jpg"
+            alt="FAIRSAFE gear with Musqueam and Vancouver FIFA World Cup 2026 host city supporter cap"
             fill
             style={{
               objectFit: "cover",
+              objectPosition: "center 70%",
             }}
           />
         </div>
@@ -494,8 +507,8 @@ export default function AboutPage() {
             }}
           >
             <Image
-              src="/images/gallery8.jpg"
-              alt=""
+              src="/jul/img2.jpg"
+              alt="Vancouver FIFA World Cup 2026 host city supporter shirt with Musqueam Indian Band crest"
               fill
               style={{
                 objectFit: "cover",

@@ -24,9 +24,12 @@ const images = [
   { src: "/gallery/IMG_1265.jpg", label: "", span: "col" },
   { src: "/gallery/IMG_1334.jpg", label: "" },
   { src: "/new/IMG_1579.jpg", label: "" },
-  
- 
-  
+  { src: "/jul/img1.jpg", label: "Event Ready Gear", span: "col" },
+  { src: "/jul/img2.jpg", label: "FIFA World Cup 2026 Host City" },
+  { src: "/jul/img3.jpg", label: "On-Site First Aid Coverage" },
+  { src: "/jul/img4.jpg", label: "FAIRSAFE On-Site" },
+  { src: "/jul/img5.jpg", label: "Event Setup" },
+  { src: "/jul/img6.jpg", label: "Field Equipment", span: "row" },
 ];
 
 export default function GalleryPage() {
