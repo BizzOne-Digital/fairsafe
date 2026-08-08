@@ -576,7 +576,7 @@ export default function Home() {
               }}
             >
               <Image
-                src="/images/work1.jpeg"
+                src="/IMG_3135.JPEG"
                 alt="FAIRSAFE"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 33vw"

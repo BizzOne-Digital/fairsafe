@@ -29,6 +29,7 @@ const images = [
   { src: "/jul/img3.jpg", label: "On-Site First Aid Coverage" },
   { src: "/jul/img4.jpg", label: "FAIRSAFE On-Site" },
   { src: "/jul/img5.jpg", label: "Event Setup" },
+  { src: "/IMG_3135.JPEG", label: "Event Setup" },
   { src: "/jul/img6.jpg", label: "Field Equipment", span: "row" },
 ];
 
