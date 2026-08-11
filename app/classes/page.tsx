@@ -91,7 +91,7 @@ const availableDates = [
 const PRICE = 148;
 const GST_RATE = 0.05;
 
-type Step = "info" | "calendar" | "checkout" | "confirmed";
+type Step = "info" | "calendar" | "checkout";
 
 export default function ClassesPage() {
   const [step, setStep] = useState<Step>("info");
@@ -99,17 +99,39 @@ export default function ClassesPage() {
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [form, setForm] = useState({ name: "", email: "", phone: "" });
   const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const gst = +(PRICE * GST_RATE).toFixed(2);
   const total = +(PRICE + gst).toFixed(2);
 
-  const handleConfirm = (e: React.FormEvent) => {
+  const handleConfirm = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    setTimeout(() => {
+    setError(null);
+
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          classDate: selectedDate,
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.url) {
+        throw new Error(data.error || "Something went wrong. Please try again.");
+      }
+
+      window.location.href = data.url;
+    } catch (err) {
       setSubmitting(false);
-      setStep("confirmed");
-    }, 700);
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -746,9 +768,13 @@ export default function ClassesPage() {
               />
 
               <p style={{ color: "rgba(26,10,46,0.45)", fontSize: "0.78rem", lineHeight: 1.6 }}>
-                Full payment is required to reserve your seat. Submitting this form sends a booking
-                request — our team will follow up with payment instructions to confirm your seat.
+                Full payment is required to reserve your seat. You'll be taken to a secure Stripe
+                checkout page to pay by card or Apple Pay.
               </p>
+
+              {error && (
+                <p style={{ color: "#DC2626", fontSize: "0.85rem", fontWeight: 600 }}>{error}</p>
+              )}
 
               <button
                 type="submit"
@@ -767,71 +793,13 @@ export default function ClassesPage() {
                   opacity: submitting ? 0.7 : 1,
                 }}
               >
-                {submitting ? "Submitting..." : `Submit Booking Request — $${total.toFixed(2)}`}
+                {submitting ? "Redirecting to payment..." : `Pay Now — $${total.toFixed(2)}`}
               </button>
             </form>
           </div>
         </section>
       )}
 
-      {/* ── CONFIRMED STEP ── */}
-      {step === "confirmed" && (
-        <section style={{ background: "#F8F5FF", padding: "120px 5% 140px", textAlign: "center" }}>
-          <div style={{ maxWidth: 560, margin: "0 auto" }}>
-            <div
-              style={{
-                width: 72,
-                height: 72,
-                borderRadius: "50%",
-                background: "rgba(124,58,237,0.12)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                margin: "0 auto 24px",
-              }}
-            >
-              <CheckCircle2 size={36} color="#7C3AED" />
-            </div>
-            <h2
-              style={{
-                fontFamily: "'Bebas Neue',sans-serif",
-                fontSize: "clamp(1.8rem,3.5vw,2.6rem)",
-                letterSpacing: "0.02em",
-                marginBottom: 14,
-              }}
-            >
-              BOOKING REQUEST <span style={{ color: "#7C3AED" }}>RECEIVED</span>
-            </h2>
-            <p style={{ color: "rgba(26,10,46,0.65)", lineHeight: 1.85, marginBottom: 8 }}>
-              Thanks, {form.name || "there"} — your seat for{" "}
-              <strong style={{ color: "#1A0A2E" }}>{selectedDate}</strong> is on hold.
-            </p>
-            <p style={{ color: "rgba(26,10,46,0.6)", lineHeight: 1.85, marginBottom: 32 }}>
-              Our team will contact you shortly at {form.email} with payment instructions to
-              confirm your registration.
-            </p>
-            <Link
-              href="/"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                background: "#7C3AED",
-                color: "white",
-                textDecoration: "none",
-                padding: "14px 30px",
-                borderRadius: 8,
-                fontSize: "0.85rem",
-                fontWeight: 800,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-              }}
-            >
-              Back to Home
-            </Link>
-          </div>
-        </section>
-      )}
     </>
   );
 }
