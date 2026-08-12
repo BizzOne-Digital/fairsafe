@@ -18,8 +18,8 @@ import {
 const courseDetails = [
   { label: "Course", value: "Intermediate First Aid + CPR C/AED" },
   { label: "Price", value: "$148 + GST" },
-  { label: "Duration", value: "14 instructional hours" },
-  { label: "Format", value: "Two-day in-class training" },
+  { label: "Duration", value: "8 hours online self-paced + 8 hours in-class" },
+  { label: "Format", value: "Online self-paced + one-day in-class training" },
   { label: "Certification", value: "3 years" },
   { label: "Prerequisites", value: "None" },
   { label: "Location", value: "FAIRSAFE Training Centre – Surrey, BC" },
@@ -81,11 +81,11 @@ const policies = [
 ];
 
 const availableDates = [
-  { date: "Sat–Sun, Aug 22–23, 2026", seats: 6 },
-  { date: "Sat–Sun, Sep 5–6, 2026", seats: 8 },
-  { date: "Sat–Sun, Sep 19–20, 2026", seats: 4 },
-  { date: "Sat–Sun, Oct 3–4, 2026", seats: 8 },
-  { date: "Sat–Sun, Oct 17–18, 2026", seats: 8 },
+  { date: "Saturday, August 22, 2026", seats: 6 },
+  { date: "Saturday, September 5, 2026", seats: 8 },
+  { date: "Saturday, September 19, 2026", seats: 4 },
+  { date: "Saturday, October 3, 2026", seats: 8 },
+  { date: "Saturday, October 17, 2026", seats: 8 },
 ];
 
 const PRICE = 148;
@@ -688,7 +688,7 @@ export default function ClassesPage() {
                   <Calendar size={16} color="#7C3AED" /> {selectedDate}
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 10, color: "rgba(26,10,46,0.7)", fontSize: "0.88rem" }}>
-                  <Clock size={16} color="#7C3AED" /> 14 instructional hours · Two-day in-class
+                  <Clock size={16} color="#7C3AED" /> 8 hours online self-paced + 8 hours in-class
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 10, color: "rgba(26,10,46,0.7)", fontSize: "0.88rem" }}>
                   <MapPin size={16} color="#7C3AED" /> FAIRSAFE Training Centre – Surrey, BC
